@@ -26,8 +26,8 @@ namespace Toetsniveau
             double totaalScore;
             double behaaldPercentage;
 
-            char niveau ='X';
-            string commentaar="Geen cijfer";
+            char niveau = 'X';
+            string commentaar = "Geen cijfer";
 
             // invoer
             behaaldeScore = double.Parse(textBoxBehaald.Text);
@@ -43,24 +43,29 @@ namespace Toetsniveau
 
             // berekeningen
             totaalScore = behaaldeScore + aantalBonuspunten;
-            behaaldPercentage = totaalScore / maximumScore *100;
+            behaaldPercentage = totaalScore / maximumScore * 100;
 
             if (behaaldPercentage <= 40)
             {
                 niveau = 'F';
-            } else if (behaaldPercentage <= 50)
+            }
+            else if (behaaldPercentage <= 50)
             {
                 niveau = 'E';
-            } else if (behaaldPercentage <= 60)
+            }
+            else if (behaaldPercentage <= 60)
             {
                 niveau = 'D';
-            } else if (behaaldPercentage <= 70)
+            }
+            else if (behaaldPercentage <= 70)
             {
                 niveau = 'C';
-            } else if (behaaldPercentage <= 80)
+            }
+            else if (behaaldPercentage <= 80)
             {
-                behaaldPercentage = 'B';
-            } else if (behaaldPercentage > 80)
+                niveau = 'B';
+            }
+            else if (behaaldPercentage > 80)
             {
                 niveau = 'A';
             }
@@ -77,7 +82,7 @@ namespace Toetsniveau
                         break;
                     case 'D':
                         commentaar = "matig";
-                            break;
+                        break;
                     case 'C':
                         commentaar = "goed";
                         break;

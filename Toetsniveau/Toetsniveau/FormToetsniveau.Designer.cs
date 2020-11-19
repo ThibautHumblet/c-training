@@ -171,6 +171,7 @@
             this.labelCommentaar.Size = new System.Drawing.Size(45, 20);
             this.labelCommentaar.TabIndex = 12;
             this.labelCommentaar.Text = "XXX";
+            this.labelCommentaar.Visible = false;
             // 
             // FormToetsniveau
             // 
