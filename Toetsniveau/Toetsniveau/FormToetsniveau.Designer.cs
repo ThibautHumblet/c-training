@@ -52,6 +52,7 @@
             this.textBoxBehaald.Size = new System.Drawing.Size(68, 27);
             this.textBoxBehaald.TabIndex = 0;
             this.textBoxBehaald.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBoxBehaald.TextChanged += new System.EventHandler(this.textBoxBehaald_TextChanged);
             // 
             // labelBehaald
             // 
@@ -162,6 +163,7 @@
             this.labelNiveau.Size = new System.Drawing.Size(29, 29);
             this.labelNiveau.TabIndex = 11;
             this.labelNiveau.Text = "X";
+            this.labelNiveau.Visible = false;
             // 
             // labelCommentaar
             // 

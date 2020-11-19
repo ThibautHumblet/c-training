@@ -34,11 +34,11 @@ namespace Toetsniveau
             maximumScore = int.Parse(listBoxMaximum.SelectedItem.ToString());
 
             if (radioButton1.Checked)
-                aantalBonuspunten = int.Parse(radioButton1.Text.ToString());
+                aantalBonuspunten = int.Parse(radioButton1.Text);
             else if (radioButton2.Checked)
-                aantalBonuspunten = int.Parse(radioButton2.Text.ToString());
+                aantalBonuspunten = int.Parse(radioButton2.Text);
             else if (radioButton3.Checked)
-                aantalBonuspunten = int.Parse(radioButton3.Text.ToString());
+                aantalBonuspunten = int.Parse(radioButton3.Text);
 
 
             // berekeningen
@@ -70,6 +70,7 @@ namespace Toetsniveau
                 niveau = 'A';
             }
 
+            labelNiveau.Visible = true;
             labelNiveau.Text = niveau.ToString();
 
             if (checkBoxCommentaar.Checked)
@@ -96,6 +97,16 @@ namespace Toetsniveau
                 labelCommentaar.Visible = true;
             }
 
+        }
+
+        private void textBoxBehaald_TextChanged(object sender, EventArgs e)
+        {
+            labelCommentaar.Visible = false;
+            labelNiveau.Visible = false;
+            listBoxMaximum.SelectedItem = null;
+            radioButton1.Checked = false;
+            radioButton2.Checked = false;
+            radioButton3.Checked = false;
         }
     }
 }
