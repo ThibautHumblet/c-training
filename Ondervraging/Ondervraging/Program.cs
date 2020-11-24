@@ -18,10 +18,22 @@ namespace Ondervraging
             // titelbalk
             Console.Title = "Random ondervraging";
 
-           
+            // declareren variabelen
+            int aantalLeerlingen;
+            Random random = new Random();
+            int randomLeerling;
+
+            // invoer + random berekening
+            Console.Write("Aantal leerlingen: ");
+            aantalLeerlingen = int.Parse(Console.ReadLine());
+
+            randomLeerling = random.Next(1, aantalLeerlingen + 1);
+            int unicodeWaarde = random.Next(65, 71);
+            char letter = (char)unicodeWaarde;
 
 
-
+            // uitvoer
+            Console.WriteLine($"Leerling met nummer {randomLeerling} beantwoordt vraag {letter}.");
 
             // afsluiten
             Console.ForegroundColor = ConsoleColor.DarkGray;
