@@ -32,7 +32,7 @@ namespace KerstboomVersieren
             hoogteKerstboom = double.Parse(textBoxHoogte.Text);
 
             // berekeningen
-            hoogteKerstboom = hoogteKerstboom / 10;
+            hoogteKerstboom = Math.Ceiling(hoogteKerstboom / 10);
             aantalKerstballen = (int)(((Math.Sqrt(17) / 20) * hoogteKerstboom));
             lengteKerstslinger = (((13 * Math.PI) / 8) * hoogteKerstboom);
             lengteLichtsnoer = Math.Round(Math.PI * hoogteKerstboom, 1);
