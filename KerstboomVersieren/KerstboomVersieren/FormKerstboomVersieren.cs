@@ -32,17 +32,17 @@ namespace KerstboomVersieren
             hoogteKerstboom = double.Parse(textBoxHoogte.Text);
 
             // berekeningen
-            hoogteKerstboom = Math.Ceiling(hoogteKerstboom / 10);
-            aantalKerstballen = (int)(((Math.Sqrt(17) / 20) * hoogteKerstboom));
-            lengteKerstslinger = (((13 * Math.PI) / 8) * hoogteKerstboom);
-            lengteLichtsnoer = Math.Round(Math.PI * hoogteKerstboom, 1);
-            hoogteKerstster = Math.Round(hoogteKerstboom / 10, 1);
+            hoogteKerstboom = hoogteKerstboom / 10;
+            aantalKerstballen = (int)(Math.Ceiling((Math.Sqrt(17) / 20) * hoogteKerstboom));
+            lengteKerstslinger = Math.Round(((13 * Math.PI) / 8) * hoogteKerstboom, 1);
+            lengteLichtsnoer = Math.Round(Math.PI * hoogteKerstboom,1);
+            hoogteKerstster = hoogteKerstboom / 10;
 
             // uitvoer
             labelAantalBallen.Text = aantalKerstballen.ToString();
-            labelLengteSlinger.Text = lengteKerstslinger.ToString("#,##0.00");
-            labelLengteLicht.Text = lengteLichtsnoer.ToString("#,##0.00");
-            labelHoogteSter.Text = hoogteKerstster.ToString("#,##0.0");
+            labelLengteSlinger.Text = lengteKerstslinger.ToString("#,##0.0 cm");
+            labelLengteLicht.Text = lengteLichtsnoer.ToString("#,##0 cm");
+            labelHoogteSter.Text = hoogteKerstster.ToString("#,##0.0 cm");
         }
     }
 }
