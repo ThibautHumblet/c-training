@@ -36,7 +36,7 @@ namespace KerstboomVersieren
             aantalKerstballen = (int)(Math.Ceiling((Math.Sqrt(17) / 20) * hoogteKerstboom));
             lengteKerstslinger = Math.Round(((13 * Math.PI) / 8) * hoogteKerstboom, 1);
             lengteLichtsnoer = Math.Round(Math.PI * hoogteKerstboom,1);
-            hoogteKerstster = hoogteKerstboom / 10;
+            hoogteKerstster = Math.Round((hoogteKerstboom / 10) /.1) *.1;
 
             // uitvoer
             labelAantalBallen.Text = aantalKerstballen.ToString();
