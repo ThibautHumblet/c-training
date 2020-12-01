@@ -18,7 +18,25 @@ namespace SomVoorgaandeGetallen
             // titelbalk
             Console.Title = "Som met alle voorgaande getallen";
 
-            
+            // declareren variabelen
+            int herhaalgetal;
+            string somTekst = "";
+            int totaleSom = 0;
+
+            // invoer
+            Console.Write("Voer een positief geheel getal in: ");
+            herhaalgetal = int.Parse(Console.ReadLine());
+
+            // uitvoer
+            for (int i = 1; i <= herhaalgetal; i++)
+            {
+                somTekst += i;
+                if (i < herhaalgetal)
+                    somTekst += " + ";
+                totaleSom += i;
+            }
+
+            Console.WriteLine($"{somTekst} = {totaleSom}");
 
             // afsluiten
             // Console.ForegroundColor = ConsoleColor.DarkGray;
